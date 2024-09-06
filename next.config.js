@@ -6,9 +6,9 @@
 const nextConfig = {
     reactStrictMode: true,
     webpack: (config) => {
-        config.resolve.caseSensitive = false;
+        config.cache = false
         return config
     }
 }
    
-export default nextConfig
+module.exports = nextConfig
