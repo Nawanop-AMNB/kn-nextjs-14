@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const dynamic = 'force-dynamic'
+export const dynamic = "force-dynamic";
 
 export default async function HomePage() {
   const data = await axios.post("https://lorem-json.com/api/json", {
@@ -8,5 +8,10 @@ export default async function HomePage() {
     age: "{{int(25, 30)}}",
     country: "{{country()}}",
   });
-  return <pre>{JSON.stringify(data.data, null, 2)}</pre>;
+  return (
+    <pre>
+      This is another branch
+      {JSON.stringify(data.data, null, 2)}
+    </pre>
+  );
 }
