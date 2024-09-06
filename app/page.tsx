@@ -1,5 +1,7 @@
 import axios from "axios";
 
+export const dynamic = 'force-dynamic'
+
 export default async function HomePage() {
   const data = await axios.post("https://lorem-json.com/api/json", {
     name: "{{name()}}",
